@@ -53,7 +53,7 @@ def draw_box_plot():
     # Draw box plots (using Seaborn)
     df_box["mon_num"] = df_box["date"].dt.month
     df_box = df_box.sort_values("mon_num")
-    fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize=(8,4))
+    fig, axes = plt.subplots(nrows = 1, ncols = 2, figsize=(14,6))
     axes[0]= sns.boxplot(x=df_box["year"],y=df_box["value"],ax=axes[0])
     axes[0].set_title("Year-wise Box Plot (Trend)")
     axes[0].set_xlabel("Year")
